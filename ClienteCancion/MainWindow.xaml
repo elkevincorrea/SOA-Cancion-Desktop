@@ -1,0 +1,23 @@
+﻿<Window x:Class="ClienteCancion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClienteCancion"
+        mc:Ignorable="d"
+        Title="Cliente Cancion" Height="140" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ListarBtn" Content="Listar" Grid.Column="0" Click="ListarBtn_Click" />
+        <Button x:Name="AgregarBtn" Content="Agregar" Grid.Column="1" Click="AgregarBtn_Click" />
+        <Button x:Name="ConsultarBtn" Content="Consultar" Grid.Column="2" Click="ConsultarBtn_Click" />
+        <Button x:Name="ActualizarBtn" Content="Actualizar" Grid.Column="3" Click="ActualizarBtn_Click" />
+        <Button x:Name="EliminarBtn" Content="Eliminar" Grid.Column="4" Click="EliminarBtn_Click" />
+    </Grid>
+</Window>

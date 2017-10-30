@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" targetNamespace="http://tempuri.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="actualizarCancion" type="tns:actualizarCancion" />
+  <xs:element name="actualizarCancionResponse" type="tns:actualizarCancionResponse" />
+  <xs:element name="adicionarCancion" type="tns:adicionarCancion" />
+  <xs:element name="adicionarCancionResponse" type="tns:adicionarCancionResponse" />
+  <xs:element name="buscarCancion" type="tns:buscarCancion" />
+  <xs:element name="buscarCancionResponse" type="tns:buscarCancionResponse" />
+  <xs:element name="eliminarCancion" type="tns:eliminarCancion" />
+  <xs:element name="eliminarCancionResponse" type="tns:eliminarCancionResponse" />
+  <xs:element name="listarCanciones" type="tns:listarCanciones" />
+  <xs:element name="listarCancionesResponse" type="tns:listarCancionesResponse" />
+  <xs:complexType name="eliminarCancion">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCancionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarCancion">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarCancionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cancion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaLanzamiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="genero" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreArtista" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCancion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:cancion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCancionResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCanciones">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCancionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cancion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adicionarCancion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:cancion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adicionarCancionResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

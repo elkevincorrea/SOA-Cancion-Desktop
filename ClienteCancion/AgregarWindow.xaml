@@ -1,0 +1,35 @@
+﻿<Window x:Class="ClienteCancion.AgregarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:ClienteCancion"
+        mc:Ignorable="d"
+        Title="Agregar canción" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Id" VerticalAlignment="Center" Margin="5" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Titulo" VerticalAlignment="Center" Margin="5" />
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Genero" VerticalAlignment="Center" Margin="5" />
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Nombre Artista" VerticalAlignment="Center" Margin="5" />
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha lanzamiento" VerticalAlignment="Center" Margin="5" />
+        <TextBox x:Name="IdTxt" Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox x:Name="TituloTxt" Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox x:Name="GeneroTxt" Grid.Row="2" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBox x:Name="NombreArtistaTxt" Grid.Row="3" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+        <DatePicker x:Name="FechaLanzamientoPick" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="5" />
+        <Button x:Name="AgregarBtn" Content="Agregar" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" Click="AgregarBtn_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/" name="CancionSWService" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:7101/AplicacionServidorCancion-ProyectoServidorCancion-context-root/CancionSWPort?xsd=1" namespace="http://tempuri.org/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCanciones">
+    <part name="parameters" element="tns:listarCanciones" />
+  </message>
+  <message name="listarCancionesResponse">
+    <part name="parameters" element="tns:listarCancionesResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="adicionarCancion">
+    <part name="parameters" element="tns:adicionarCancion" />
+  </message>
+  <message name="adicionarCancionResponse">
+    <part name="parameters" element="tns:adicionarCancionResponse" />
+  </message>
+  <message name="buscarCancion">
+    <part name="parameters" element="tns:buscarCancion" />
+  </message>
+  <message name="buscarCancionResponse">
+    <part name="parameters" element="tns:buscarCancionResponse" />
+  </message>
+  <message name="actualizarCancion">
+    <part name="parameters" element="tns:actualizarCancion" />
+  </message>
+  <message name="actualizarCancionResponse">
+    <part name="parameters" element="tns:actualizarCancionResponse" />
+  </message>
+  <message name="eliminarCancion">
+    <part name="parameters" element="tns:eliminarCancion" />
+  </message>
+  <message name="eliminarCancionResponse">
+    <part name="parameters" element="tns:eliminarCancionResponse" />
+  </message>
+  <portType name="CancionSW">
+    <operation name="listarCanciones">
+      <input message="tns:listarCanciones" />
+      <output message="tns:listarCancionesResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="adicionarCancion">
+      <input message="tns:adicionarCancion" />
+      <output message="tns:adicionarCancionResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="buscarCancion">
+      <input message="tns:buscarCancion" />
+      <output message="tns:buscarCancionResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarCancion">
+      <input message="tns:actualizarCancion" />
+      <output message="tns:actualizarCancionResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarCancion">
+      <input message="tns:eliminarCancion" />
+      <output message="tns:eliminarCancionResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="CancionSWPortBinding" type="tns:CancionSW">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCanciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="adicionarCancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarCancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarCancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarCancion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CancionSWService">
+    <port name="CancionSWPort" binding="tns:CancionSWPortBinding">
+      <soap:address location="http://localhost:7101/AplicacionServidorCancion-ProyectoServidorCancion-context-root/CancionSWPort" />
+    </port>
+  </service>
+</definitions>

@@ -29,6 +29,7 @@ namespace ClienteCancion
                     PropertyChanged(this, new PropertyChangedEventArgs("Genero"));
                     PropertyChanged(this, new PropertyChangedEventArgs("NombreArtista"));
                     PropertyChanged(this, new PropertyChangedEventArgs("FechaLanzamiento"));
+                    PropertyChanged(this, new PropertyChangedEventArgs("Duracion"));
                 }
             }
         }
@@ -64,6 +65,15 @@ namespace ClienteCancion
                 Cancion.fechaLanzamientoSpecified = true;
                 Cancion.fechaLanzamiento = value;
             } 
+        }
+
+        public int Duracion
+        {
+            get { return Cancion.duracion; }
+            set
+            {
+                Cancion.duracion = value;
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -18,6 +18,7 @@
                 <DataGridTextColumn Header="Nombre Artista" Binding="{Binding nombreArtista}" />
                 <DataGridTextColumn Header="Género" Binding="{Binding genero}" />
                 <DataGridTextColumn Header="Fecha Lanzamiento" Binding="{Binding fechaLanzamiento}" />
+                <DataGridTextColumn Header="Duración" Binding="{Binding duracion}" />
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="ActualizarBtn" Content="Actualizar" Grid.Row="1" Click="ActualizarBtn_Click" />

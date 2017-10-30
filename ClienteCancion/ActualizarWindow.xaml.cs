@@ -57,6 +57,15 @@ namespace ClienteCancion
             }
             viewModel.Cancion.fechaLanzamiento = fechaLanz.Value;
             viewModel.Cancion.fechaLanzamientoSpecified = true;
+            /*string duracionStr = DuracionTxt.Text.Trim();
+            int duracion;
+            if (!Int32.TryParse(duracionStr, out duracion))
+            {
+                MessageBox.Show("Ingrese una duración válida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            viewModel.Duracion = duracion;
+            viewModel.Cancion.duracion = duracion;*/
             try
             {
                 clienteCancion.actualizarCancion(viewModel.Cancion);

@@ -51,6 +51,8 @@ namespace ClienteCancion.CancionSW {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://tempuri.org/")]
     public partial class cancion : object, System.ComponentModel.INotifyPropertyChanged {
         
+        private int duracionField;
+        
         private System.DateTime fechaLanzamientoField;
         
         private bool fechaLanzamientoFieldSpecified;
@@ -65,6 +67,18 @@ namespace ClienteCancion.CancionSW {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int duracion {
+            get {
+                return this.duracionField;
+            }
+            set {
+                this.duracionField = value;
+                this.RaisePropertyChanged("duracion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public System.DateTime fechaLanzamiento {
             get {
                 return this.fechaLanzamientoField;
@@ -88,7 +102,7 @@ namespace ClienteCancion.CancionSW {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string genero {
             get {
                 return this.generoField;
@@ -100,7 +114,7 @@ namespace ClienteCancion.CancionSW {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int id {
             get {
                 return this.idField;
@@ -112,7 +126,7 @@ namespace ClienteCancion.CancionSW {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string nombreArtista {
             get {
                 return this.nombreArtistaField;
@@ -124,7 +138,7 @@ namespace ClienteCancion.CancionSW {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string titulo {
             get {
                 return this.tituloField;

@@ -19,6 +19,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Buscar por id" VerticalAlignment="Center" Margin="5" />
@@ -29,10 +30,12 @@
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Genero" VerticalAlignment="Center" Margin="5" />
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Nombre Artista" VerticalAlignment="Center" Margin="5" />
         <TextBlock Grid.Row="5" Grid.Column="0" Text="Fecha lanzamiento" VerticalAlignment="Center" Margin="5" />
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Duracion (seg)" VerticalAlignment="Center" Margin="5" />
         <TextBox x:Name="IdTxt" Text="{Binding Path=Id, StringFormat={}{0:#;#}}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" IsEnabled="False" />
         <TextBox x:Name="TituloTxt" Text="{Binding Path=Titulo}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" IsEnabled="False" />
         <TextBox x:Name="GeneroTxt" Text="{Binding Path=Genero}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" IsEnabled="False" />
         <TextBox x:Name="NombreArtistaTxt" Text="{Binding Path=NombreArtista}" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" IsEnabled="False" />
         <DatePicker x:Name="FechaLanzamientoPick" SelectedDate="{Binding Path=FechaLanzamiento}" IsEnabled="False" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="5" />
+        <TextBox x:Name="DuracionTxt" Text="{Binding Path=Duracion, StringFormat={}{0:#;#}}" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" IsEnabled="False" />
     </Grid>
 </Window>

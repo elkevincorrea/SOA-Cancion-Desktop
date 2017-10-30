@@ -50,7 +50,14 @@ namespace ClienteCancion
                 MessageBox.Show("Ingrese una fecha válida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            Cancion cancion = new Cancion() { id = id, genero = genero, titulo = titulo, nombreArtista = nombreArtista, fechaLanzamiento = date.Value, fechaLanzamientoSpecified = true };
+            string duracionStr = DuracionTxt.Text.Trim();
+            int duracion;
+            if (!Int32.TryParse(duracionStr, out duracion))
+            {
+                MessageBox.Show("Ingrese una duración válida", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            Cancion cancion = new Cancion() { id = id, genero = genero, titulo = titulo, nombreArtista = nombreArtista, fechaLanzamiento = date.Value, fechaLanzamientoSpecified = true, duracion = duracion };
             try
             {
                 clienteCancion.adicionarCancion(cancion);

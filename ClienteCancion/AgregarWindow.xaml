@@ -18,6 +18,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Id" VerticalAlignment="Center" Margin="5" />
@@ -25,11 +26,13 @@
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Genero" VerticalAlignment="Center" Margin="5" />
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Nombre Artista" VerticalAlignment="Center" Margin="5" />
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Fecha lanzamiento" VerticalAlignment="Center" Margin="5" />
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Duración (seg)" VerticalAlignment="Center" Margin="5" />
         <TextBox x:Name="IdTxt" Grid.Row="0" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
         <TextBox x:Name="TituloTxt" Grid.Row="1" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
         <TextBox x:Name="GeneroTxt" Grid.Row="2" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
         <TextBox x:Name="NombreArtistaTxt" Grid.Row="3" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
         <DatePicker x:Name="FechaLanzamientoPick" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Margin="5" />
-        <Button x:Name="AgregarBtn" Content="Agregar" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0" Click="AgregarBtn_Click" />
+        <TextBox x:Name="DuracionTxt" Grid.Row="5" Grid.Column="1" Margin="5" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+        <Button x:Name="AgregarBtn" Content="Agregar" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0" Click="AgregarBtn_Click" />
     </Grid>
 </Window>
